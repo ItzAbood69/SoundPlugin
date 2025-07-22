@@ -1,0 +1,46 @@
+name: SoundPlugin
+version: 1.0.0
+main: org.ItzAbood69.SoundPlugin
+api-version: 1.12
+author: ItzAbood69
+description: A comprehensive plugin to play any Minecraft sound with commands
+website: https://github.com/ItzAbood69
+prefix: SoundPlugin
+
+commands:
+  sound:
+    description: Play a sound effect at your location
+    usage: /sound <sound_name> [volume] [pitch]
+    permission: soundplugin.play
+    permission-message: §c❌ You don't have permission to use this command!
+    aliases: [playsound, s]
+  soundhelp:
+    description: Show help information for the SoundPlugin
+    usage: /soundhelp
+    permission: soundplugin.help
+    permission-message: §c❌ You don't have permission to use this command!
+    aliases: [shelp, soundinfo]
+  soundreload:
+    description: Reload the SoundPlugin configuration
+    usage: /soundreload
+    permission: soundplugin.admin
+    permission-message: §c❌ You don't have permission to use this command!
+    aliases: [sreload]
+
+permissions:
+  soundplugin.*:
+    description: Grants access to all SoundPlugin features
+    default: op
+    children:
+      soundplugin.play: true
+      soundplugin.help: true
+      soundplugin.admin: true
+  soundplugin.play:
+    description: Allows players to play sounds using /sound command
+    default: true
+  soundplugin.help:
+    description: Allows players to view help information
+    default: true
+  soundplugin.admin:
+    description: Admin permissions for the sound plugin (reserved for future features)
+    default: op

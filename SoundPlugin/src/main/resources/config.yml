@@ -1,0 +1,92 @@
+# ========================================
+# SoundPlugin Configuration
+# Plugin by: ItzAbood69
+# Version: 1.0.0
+# ========================================
+
+# Plugin Settings
+settings:
+  # Enable or disable the entire plugin
+  enable-plugin: true
+
+  # Default volume when not specified (0.0 - max-volume)
+  default-volume: 1.0
+
+  # Default pitch when not specified (min-pitch - max-pitch)
+  default-pitch: 1.0
+
+  # Maximum volume allowed
+  max-volume: 2.0
+
+  # Maximum pitch allowed
+  max-pitch: 2.0
+
+  # Minimum pitch allowed
+  min-pitch: 0.5
+
+  # Log all sound plays to console (true/false)
+  log-sounds: false
+
+  # List of blocked sound names (case-sensitive)
+  blocked-sounds:
+    - "ENTITY_WITHER_SPAWN"
+    - "ENTITY_ENDER_DRAGON_DEATH"
+    # Add more sounds here if needed
+
+# Custom Messages (Use & for color codes)
+messages:
+  # General messages
+  no-permission: "&c❌ You don't have permission to use this command!"
+  player-only: "&c❌ Only players can use this command!"
+  plugin-disabled: "&c❌ SoundPlugin is currently disabled!"
+  config-reloaded: "&a✅ Configuration reloaded successfully!"
+
+  # Sound command messages
+  usage: "&c❌ Usage: &e/sound <sound_name> [volume] [pitch]"
+  sound-played: "&a🎵 Playing sound: &e{sound} &a(Volume: &e{volume}&a, Pitch: &e{pitch}&a)"
+  sound-not-found: "&c❌ Sound '&e{sound}&c' not found!"
+  sound-blocked: "&c❌ This sound is blocked by the server!"
+
+  # Volume and pitch validation messages
+  invalid-volume: "&c❌ Volume must be between 0.0 and {max-volume}"
+  invalid-volume-format: "&c❌ Invalid volume! Use a number between 0.0 and {max-volume}"
+  invalid-pitch: "&c❌ Pitch must be between {min-pitch} and {max-pitch}"
+  invalid-pitch-format: "&c❌ Invalid pitch! Use a number between {min-pitch} and {max-pitch}"
+
+  # Help message (each line is a separate list item)
+  help-message:
+    - "&6========== &eSoundPlugin Help &6=========="
+    - "&b📢 Plugin by: &e{author}"
+    - "&b🔧 Version: &e{version}"
+    - ""
+    - "&a🎵 Commands:"
+    - "&e/sound <sound_name> [volume] [pitch] &7- Play a sound"
+    - "&e/soundhelp &7- Show this help menu"
+    - "&e/soundreload &7- Reload configuration (Admin only)"
+    - ""
+    - "&a🔑 Permissions:"
+    - "&e• soundplugin.play &7- Play sounds"
+    - "&e• soundplugin.help &7- View help"
+    - "&e• soundplugin.admin &7- All permissions"
+    - ""
+    - "&a📋 Examples:"
+    - "&e/sound BLOCK_NOTE_BLOCK_PLING"
+    - "&e/sound ENTITY_CREEPER_PRIMED 1.5"
+    - "&e/sound BLOCK_ANVIL_PLACE 0.8 0.5"
+    - ""
+    - "&a💡 Tips:"
+    - "&7• Use tab completion to find sounds"
+    - "&7• Volume: 0.0-2.0, Pitch: 0.5-2.0"
+    - "&7• Some sounds may be blocked by server"
+    - "&6====================================="
+
+# Advanced Settings
+advanced:
+  # Enable debug mode (shows extra console messages)
+  debug-mode: false
+
+  # Sound cooldown in milliseconds (0 to disable)
+  sound-cooldown: 0
+
+  # Maximum sounds per player per minute (0 for unlimited)
+  max-sounds-per-minute: 0
